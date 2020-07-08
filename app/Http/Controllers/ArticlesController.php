@@ -17,8 +17,6 @@ class ArticlesController extends Controller
     }
 
     public function deleteById($id){
-        $article = Article::find($id);
-        $article->delete();
-        dd($article);
+        return Article::find($id)->delete();
     }
 }
